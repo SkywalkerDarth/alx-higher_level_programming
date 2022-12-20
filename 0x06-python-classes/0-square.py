@@ -2,6 +2,7 @@
 # 0-square.py by Skywalker
 """Defines a square """
 
+
 class Square:
     """Does nothing"""
     pass
