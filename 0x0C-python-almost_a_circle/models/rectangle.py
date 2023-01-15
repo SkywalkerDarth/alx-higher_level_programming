@@ -21,7 +21,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-        @property
+    @property
     def width(self):
         """
             getter function for __width
@@ -29,7 +29,7 @@ class Rectangle(Base):
         """
         return self.__width
 
-        @width.setter
+    @width.setter
     def width(self, value):
         """
             setter function for width.
@@ -43,7 +43,7 @@ class Rectangle(Base):
 
         self.__width = value
 
-        @property
+    @property
     def height(self):
         """
             getter function for height
@@ -51,7 +51,7 @@ class Rectangle(Base):
         """
         return self.__height
 
-        @height.setter
+    @height.setter
     def height(self, value):
         """
             setter function for height
@@ -65,7 +65,7 @@ class Rectangle(Base):
 
         self.__height = value
 
-        @property
+    @property
     def x(self):
         """
             getter function for x.
@@ -73,7 +73,7 @@ class Rectangle(Base):
         """
         return self.__x
 
-        @x.setter
+    @x.setter
     def x(self, value):
         """
             setter function for x.
@@ -87,7 +87,7 @@ class Rectangle(Base):
 
         self.__x = value
 
-        @property
+    @property
     def y(self):
         """
             getter function for y
@@ -95,7 +95,7 @@ class Rectangle(Base):
         """
         return self.__y
 
-        @y.setter
+    @y.setter
     def y(self, value):
         """
             setter function for y
@@ -140,9 +140,9 @@ class Rectangle(Base):
         """
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
                                                 self.__x, self.__y,
-                                                self.__width
+                                                self.__width, self.__height)
 
-                                                    def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """
             assigns key/value argument to attributes
             kwargs is skipped if args is not empty

@@ -55,7 +55,7 @@ class Base:
                 list_dicts = [o.to_dictionary() for o in list_objs]
                 jsonfile.write(Base.to_json_string(list_dicts))
 
-        @staticmethod
+    @staticmethod
     def from_json_string(json_string):
         """Return the deserialization of a JSON string.
 
@@ -69,7 +69,7 @@ class Base:
             return []
             return json.loads(json_string)
 
-        @classmethod
+    @classmethod
     def create(cls, **dictionary):
         """Return a class instantied from a dictionary of attributes.
 
@@ -84,7 +84,7 @@ class Base:
             new.update(**dictionary)
             return new
 
-        @classmethod
+    @classmethod
     def load_from_file(cls):
         """Return a list of classes instantiated from a file of JSON strings.
 
@@ -102,7 +102,7 @@ class Base:
         except IOError:
             return []
 
-        @classmethod
+    @classmethod
     def save_to_file_csv(cls, list_objs):
         """Write the CSV serialization of a list of objects to a file.
 
@@ -122,7 +122,7 @@ class Base:
                 for obj in list_objs:
                     writer.writerow(obj.to_dictionary())
 
-        @classmethod
+    @classmethod
     def load_from_file_csv(cls):
         """Return a list of classes instantiated from a CSV file.
 
@@ -146,7 +146,7 @@ class Base:
         except IOError:
             return []
 
-        @staticmethod
+    @staticmethod
     def draw(list_rectangles, list_squares):
         """Draw Rectangles and Squares using the turtle module.
 
