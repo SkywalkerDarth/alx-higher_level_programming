@@ -158,6 +158,7 @@ class Base:
         turt.screen.bgcolor("#b7312c")
         turt.pensize(3)
         turt.shape("turtle")
+        
         turt.color("#ffffff")
         for rect in list_rectangles:
             turt.showturtle()
