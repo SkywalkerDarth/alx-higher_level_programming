@@ -5,7 +5,7 @@ displays all values in the states
 where `name` matches the argument
 from the database `hbtn_0e_0_usa`.
 This time the script is safe from
-MySQL injections!.
+MySQL injections!
 """
 
 import MySQLdb
@@ -16,6 +16,7 @@ if __name__ == '__main__':
     Access to the database and get the states
     from the database.
     """
+
     db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
                          passwd=argv[2], db=argv[3])
     with db.cursor() as cur:
@@ -32,7 +33,7 @@ if __name__ == '__main__':
             'name': argv[4]
         })
 
-    	rows = cur.fetchall()
+        rows = cur.fetchall()
 
     if rows is not None:
         for row in rows:
